@@ -145,7 +145,7 @@ function chordListBuilder(){
 // Generates display data from selected chords
 function keyDisplayBuilder(){
     var target_key = compareKeys(chordList)
-
+    setTimeout(function(){ console.log('Patience, my friend'); }, 1500);
     // Checks for invalid chord combination and resets if founc
     if(document.getElementById("chordDisplay").innerText==='Invalid chord combination'){
         console.log('invalid chord list')
