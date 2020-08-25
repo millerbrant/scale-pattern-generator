@@ -1,0 +1,14 @@
+.mainElement{
+    background-color: black;
+    color: white
+}
+
+.spaced{
+    margin: 3px;
+    padding: 3px
+}
+
+.imgHang{
+    height: 75%;
+    width: auto
+}

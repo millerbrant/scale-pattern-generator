@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Sounds good in theory</title>
+
+  <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/style/style.css">
+</head>
+
+<body class="mainElement">
+
+  <!-- Our rows function in containers (grid created). -->
+  <div class="container">
+
+    <!-- Our columns function in rows. -->
+    <div class="row">
+      <div class = 'col-md-12 shadow text-center display-1'>Scale Pattern Generator</div>
+      <!-- Columns have 12 areas of width to work with. -->
+
+      <!-- One third of screen (4/12) -->
+      <div class="col-md-4">
+        <form>
+          <div class="form-group">
+            <label for="chordAdd">Add Chord to List</label>
+            <input class="form-control" id="chordInput" aria-describedby="chordHelp" placeholder="Enter a chord name">
+            <small id="chordHelp" class="form-text text-muted">Enter minor chords as 'Xm' and major chords as 'X'</small>
+            <div class="btn-group" role="group" aria-label="chord nav buttons">
+            <button type="button" class="btn btn-light spaced" id="addChord">Add chord</button>
+            <button type="button" class="btn btn-primary spaced" id="getKey">Generate key</button>
+            <button type="button" class="btn btn-dark spaced" id="reset">Reset</button>
+          </div>
+        </div>
+        </form>
+
+        
+        <!-- This is column 1 of 3 -->
+      </div>
+      <div class = "col-md-8 display-3 text-center" id="chordDisplay">Enter chords</div>
+
+
+      <!-- Columns float left, so all adjacent rows will appear next to each other (as long as not all space gets taken up) -->
+    </div>
+
+  </div>
+
+
+  <!-- Creates the Overall Grid -->
+  <div id="hidepane">
+  <div class="container">
+        <button class="btn btn-dark btn-block" type="button" data-toggle="collapse" id="collapse1but" data-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">
+          Key of -</button>
+          <div class="row chordPanel" id="collapse1">
+  
+        <!-- Scale field -->
+        <div class="col-md-3 scalePane">
+          <h4 id = "ionian1">Ionian - </h4>
+          <h5 id = "ionian1Root"></h5>
+        <img src="static/images/ionian.png" alt="ionian scale">
+        </div>
+        <div class="col-md-3 scalePane">
+          <h4 id = "dorian1">Dorian - </h4>
+          <h5 id = "dorian1Root"></h5>
+          <img src="static/images/dorian.png" alt="dorian scale">
+        </div>
+        <div class="col-md-3 scalePane">
+          <h4 id = "phrygian1">Phrygian - </h4>
+          <h5 id = "phrygian1Root"></h5>
+          <img src="static/images/phrygian.png" alt="phrygian scale">
+        </div>
+        <div class="col-md-3 scalePane">
+          <h4 id = "lydian1">Lydian - </h4>
+          <h5 id = "lydian1Root"></h5>
+          <img src="static/images/lydian.png" alt="lydian scale">
+        </div><div class="col-md-12 mainElement"></div>
+        <div class="col-md-3 scalePane">
+          <h4 id = "mixolydian1">Mixolydian - </h4>
+          <h5 id = "mixolydian1Root"></h5>
+          <img src="static/images/mixolydian.png" alt="mixolydian scale">
+        </div>
+        <div class="col-md-3 scalePane">
+          <h4 id="aolian1">Aolian -</h3>
+          <h5 id = "aolian1Root"></h5>
+          <img src="static/images/aolian.png" alt="aolian scale">
+        </div>
+        <div class="col-md-3 scalePane">
+          <h4 id = "blues1">Blues - </h4>
+          <h5 id = "blues1Root"></h5>
+          <img src="static/images/blues.png" alt="blues scale">
+        </div>
+      </div> <!--This ends the row chordPanel div-->
+    </button> <!--This ends the row div-->
+  </div> <!-- This ends the first container div-->
+
+  <div class="container">
+    <button class="btn btn-dark btn-block" type="button" data-toggle="collapse" id="collapse2but" data-target="#collapse2" aria-expanded="false" aria-controls="collapseExample">
+      Key of -</button>
+      <div class="row chordPanel" id="collapse2">
+
+    <!-- Scale field -->
+    <div class="col-md-3 scalePane main">
+      <h4 id = "ionian2">Ionian - </h4>
+      <h5 id = "ionian2Root"></h5>
+      <img src="static/images/ionian.png" alt="ionian scale">
+    </div>
+    <div class="col-md-3 scalePane">
+      <h4 id = "dorian2">Dorian - </h4>
+      <h5 id = "dorian2Root"></h5>
+      <img src="static/images/dorian.png" alt="dorian scale">
+    </div>
+    <div class="col-md-3 scalePane">
+      <h4 id = "phrygian2">Phrygian - </h4>
+      <h5 id = "phrygian2Root"></h5>
+      <img src="static/images/phrygian.png" alt="phrygian scale">
+    </div>
+    <div class="col-md-3 scalePane">
+      <h4 id = "lydian2">Lydian - </h4>
+      <h5 id = "lydian2Root"></h5>
+      <img src="static/images/lydian.png" alt="lydian scale">
+    </div>
+    <div class="col-md-3 scalePane">
+      <h4 id = "mixolydian2">Mixolydian - </h4>
+      <h5 id = "mixolydian2Root"></h5>
+      <img src="static/images/mixolydian.png" alt="mixolydian scale">
+    </div>
+    <div class="col-md-3 scalePane">
+      <h4 id="aolian2">Aolian -</h3>
+      <h5 id = "aolian2Root"></h5>
+      <img src="static/images/aolian.png" alt="aolian scale">
+    </div>
+    <div class="col-md-3 scalePane">
+      <h4 id = "blues2">Blues - </h4>
+      <h5 id = "blues2Root"></h5>
+      <img src="static/images/blues.png" alt="blues scale">
+    </div>
+  </div> <!--This ends the row chordPanel div-->
+</button> <!--This ends the row div-->
+</div> <!-- This ends the first container div-->
+
+<div class="container">
+  <button class="btn btn-dark btn-block" type="button" data-toggle="collapse" id="collapse3but" data-target="#collapse3" aria-expanded="false" aria-controls="collapseExample">
+    Key of -</button>
+    <div class="row chordPanel" id="collapse3">
+
+  <!-- Scale field -->
+  <div class="col-md-3 scalePane main">
+    <h4 id = "ionian3">Ionian - </h4>
+    <h5 id = "ionian3Root"></h5>
+    <img src="static/images/ionian.png" alt="ionian scale">
+  </div>
+  <div class="col-md-3 scalePane">
+    <h4 id = "dorian3">Dorian - </h4>
+    <h5 id = "dorian3Root"></h5>
+    <img src="static/images/dorian.png" alt="dorian scale">
+  </div>
+  <div class="col-md-3 scalePane">
+    <h4 id = "phrygian3">Phrygian - </h4>
+    <h5 id = "phrygian3Root"></h5>
+    <img src="static/images/phrygian.png" alt="phrygian scale">
+  </div>
+  <div class="col-md-3 scalePane">
+    <h4 id = "lydian3">Lydian - </h4>
+    <h5 id = "lydian3Root"></h5>
+    <img src="static/images/lydian.png" alt="lydian scale">
+  </div>
+  <div class="col-md-3 scalePane">
+    <h4 id = "mixolydian3">Mixolydian - </h4>
+    <h5 id = "mixolydian3Root"></h5>
+    <img src="static/images/mixolydian.png" alt="mixolydian scale">
+  </div>
+  <div class="col-md-3 scalePane">
+    <h4 id="aolian3">Aolian -</h3>
+    <h5 id = "aolian3Root"></h5>
+    <img src="static/images/aolian.png" alt="aolian scale">
+  </div>
+  <div class="col-md-3 scalePane">
+    <h4 id = "blues3">Blues - </h4>
+    <h5 id = "blues3Root"></h5>
+    <img src="static/images/blues.png" alt="blues scale">
+  </div>
+</div> <!--This ends the row chordPanel div-->
+</button> <!--This ends the row div-->
+</div> <!-- This ends the first container div-->
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="datamarkup.js"></script>
+</body>
+
+</html>
