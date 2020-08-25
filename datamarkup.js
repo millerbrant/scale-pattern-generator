@@ -143,16 +143,17 @@ function chordListBuilder(){
 }
 
 // Generates display data from selected chords
-function keyDisplayBuilder(){
+async function keyDisplayBuilder(){
     var target_key = compareKeys(chordList)
-    setTimeout(function(){ console.log('Patience, my friend'); }, 1500);
+
     // Checks for invalid chord combination and resets if founc
     if(document.getElementById("chordDisplay").innerText==='Invalid chord combination'){
         console.log('invalid chord list')
         reset()}
 
     // 
-    else{
+    else{await sleep(2000)
+        
         // Set length for data processing
         numKeys = target_key.length
 
@@ -216,6 +217,10 @@ function reset(){
     document.getElementById("chordDisplay").innerText==='Enter Chords'
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
 // Run on load
 hideCpanel()
 makeAllKeys()
@@ -224,4 +229,3 @@ makeAllNotes()
 // D3 listeners
 d3.selectAll("#addChord").on("click", function(){chordListBuilder()})
 d3.selectAll("#getKey").on("click", function(){keyDisplayBuilder()})
-d3.selectAll("#reset").on("click", function(){reset()})
