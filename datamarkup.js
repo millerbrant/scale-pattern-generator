@@ -157,8 +157,8 @@ async function keyDisplayBuilder(){
         // Set length for data processing
         numKeys = target_key.length
 
-            // ****Brute force alert***** Loops through provided key names, generates root fret and scale name for each validated key
-            for(i=0;i<numKeys;i++){
+            // Loops through provided key names, generates root fret and scale name for each validated key
+            for(i=0;i<=numKeys;i++){
                 console.log('i value: ' + i)
                 var thisKey = all_notes[target_key[i]]
                 console.log('Trying to access target_key[i]: '+ target_key[i])
