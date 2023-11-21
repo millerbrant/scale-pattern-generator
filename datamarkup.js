@@ -96,7 +96,7 @@ function compareKeys(cList){
         var flashtext = `${kList.length} possible key identified`
         console.log('One key identified, flashtext value: ' + flashtext)
     }
-    else{var flashtext = `${kList.length} possible keys identified`
+    else{var flashtext = `${kList.length} possible keys identified`}
 
     // Checks for invalid chord combinations for info display
     if(Math.max(...scores)<=0){
@@ -108,7 +108,7 @@ function compareKeys(cList){
 
         return kList
 
-}}
+}
 
 // Used to compare provided chords to key list
 function scoreit(chords,key){
@@ -158,7 +158,7 @@ async function keyDisplayBuilder(){
         numKeys = target_key.length
 
             // Loops through provided key names, generates root fret and scale name for each validated key
-            for(i=0;i<=numKeys;i++){
+            for(i=0;i<numKeys;i++){
                 console.log('i value: ' + i)
                 var thisKey = all_notes[target_key[i]]
                 console.log('Trying to access target_key[i]: '+ target_key[i])
