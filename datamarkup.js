@@ -152,7 +152,7 @@ async function keyDisplayBuilder(){
         reset()}
 
     // 
-    else{await sleep(2000)
+    else{await sleep(500)
         
         // Set length for data processing
         numKeys = target_key.length
@@ -198,6 +198,7 @@ async function keyDisplayBuilder(){
     //showButtons()
     showCpanel()
     chordList=[]
+    $('.collapse').collapse()
 }}
 
 // Hides chord display during entry
@@ -225,6 +226,16 @@ function sleep(ms) {
 hideCpanel()
 makeAllKeys()
 makeAllNotes()
+
+function hider () {
+    $(".chordPanel").collapse()}
+
+function confirmIt(){
+    console.log("Confirmed")
+}
+
+// hider()
+confirmIt()
 
 // D3 listeners
 d3.selectAll("#addChord").on("click", function(){chordListBuilder()})
